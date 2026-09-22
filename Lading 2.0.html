@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROTA 12 — As 12 Profissões da Nova Economia</title>
+  <meta name="description" content="Conheça 12 profissões da nova economia, ferramentas, caminhos de entrada e estratégias para começar em 2026. Acesso imediato por R$19,99." />
+  <style>
+    :root{
+      --bg:#070707;
+      --card:#111111;
+      --muted:#a7a7a7;
+      --text:#f7f7f7;
+      --gold:#d7b65a;
+      --gold2:#f0d98b;
+      --line:#242424;
+      --success:#1fd17a;
+      --danger:#ff5c5c;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(215,182,90,.10), transparent 25%),
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.03), transparent 20%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{
+      text-align:center;
+      padding:10px 15px;
+      background:#0d0d0d;
+      border-bottom:1px solid var(--line);
+      font-size:14px;
+      color:#d7d7d7;
+    }
+    .hero{
+      padding:72px 0 44px;
+      text-align:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid #3a3320;
+      background:#16140d;
+      color:var(--gold2);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+    h1{
+      font-size:clamp(42px,7vw,78px);
+      line-height:.98;
+      margin:24px auto 18px;
+      max-width:940px;
+      letter-spacing:-2.6px;
+    }
+    .gold{color:var(--gold)}
+    .subtitle{
+      max-width:800px;
+      margin:0 auto;
+      color:#cfcfcf;
+      font-size:clamp(18px,2.3vw,23px);
+    }
+    .hero-cta{
+      margin:34px auto 16px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+    .btn{
+      display:inline-block;
+      border-radius:12px;
+      padding:17px 26px;
+      font-weight:900;
+      font-size:17px;
+      transition:.2s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(180deg,var(--gold2),var(--gold));
+      color:#111;
+      box-shadow:0 10px 30px rgba(215,182,90,.18);
+    }
+    .btn-primary:hover{transform:translateY(-2px)}
+    .small-note{
+      color:#8f8f8f;
+      font-size:13px;
+      margin-top:10px;
+    }
+    .hero-card{
+      margin:48px auto 0;
+      max-width:900px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,#111,#0c0c0c);
+      border-radius:22px;
+      padding:28px;
+      text-align:left;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:28px;
+      align-items:center;
+    }
+    .mockup{
+      min-height:340px;
+      border-radius:18px;
+      padding:28px;
+      background:
+        linear-gradient(145deg, rgba(215,182,90,.16), transparent 55%),
+        #0b0b0b;
+      border:1px solid #2b2b2b;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+    .mockup .mini{
+      color:var(--gold2);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+    .mockup h2{
+      font-size:48px;
+      margin:8px 0 4px;
+      letter-spacing:-2px;
+    }
+    .mockup p{color:#bfbfbf;margin:0}
+    .checklist{list-style:none;padding:0;margin:0}
+    .checklist li{
+      padding:11px 0 11px 34px;
+      position:relative;
+      border-bottom:1px solid #1c1c1c;
+      color:#dedede;
+    }
+    .checklist li:last-child{border-bottom:none}
+    .checklist li:before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:10px;
+      color:var(--success);
+      font-weight:900;
+    }
+    section{padding:70px 0}
+    .section-title{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 36px;
+    }
+    .section-title h2{
+      margin:0 0 12px;
+      font-size:clamp(30px,4vw,48px);
+      letter-spacing:-1.5px;
+    }
+    .section-title p{color:var(--muted);margin:0;font-size:18px}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    .card .num{
+      color:var(--gold);
+      font-weight:900;
+      font-size:13px;
+      letter-spacing:1px;
+    }
+    .card h3{margin:8px 0 8px;font-size:20px}
+    .card p{color:#aaa;margin:0}
+    .darkbox{
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:32px;
+      background:#0d0d0d;
+    }
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    .bonus{
+      border-left:3px solid var(--gold);
+      padding-left:18px;
+      margin:18px 0;
+    }
+    .bonus h3{margin:0 0 5px}
+    .bonus p{margin:0;color:#aaa}
+    .price-box{
+      max-width:760px;
+      margin:auto;
+      text-align:center;
+      padding:38px;
+      background:linear-gradient(180deg,#15130d,#0d0d0d);
+      border:1px solid #3a3320;
+      border-radius:24px;
+    }
+    .old-price{
+      color:#8d8d8d;
+      text-decoration:line-through;
+      font-size:16px;
+    }
+    .price{
+      font-size:64px;
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-2.8px;
+      margin:8px 0 10px;
+      color:var(--gold2);
+    }
+    .price small{font-size:24px}
+    .price-box p{color:#bebebe}
+    .faq{
+      max-width:860px;
+      margin:auto;
+      display:grid;
+      gap:12px;
+    }
+    details{
+      background:#0f0f0f;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:17px 20px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+    }
+    details p{color:#aaa;margin-bottom:0}
+    footer{
+      padding:35px 0 50px;
+      text-align:center;
+      color:#777;
+      font-size:13px;
+      border-top:1px solid var(--line);
+    }
+    .sticky{
+      display:none;
+    }
+    .disclaimer{
+      max-width:760px;
+      margin:18px auto 0;
+      color:#777;
+      font-size:12px;
+    }
+    @media (max-width:800px){
+      .hero{padding-top:48px}
+      .hero-grid,.two-col,.cards{grid-template-columns:1fr}
+      .hero-card{padding:18px}
+      .mockup{min-height:290px}
+      .sticky{
+        display:block;
+        position:fixed;
+        left:0;right:0;bottom:0;
+        z-index:30;
+        padding:10px 12px;
+        background:rgba(5,5,5,.94);
+        backdrop-filter:blur(10px);
+        border-top:1px solid #252525;
+      }
+      .sticky .btn{display:block;text-align:center;padding:14px}
+      body{padding-bottom:74px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Acesso imediato • Material digital • Atualizado para 2026</div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="badge">NOVA ECONOMIA 2026</span>
+
+      <h1>Descubra as <span class="gold">12 profissões</span> que estão abrindo novas oportunidades na era da IA.</h1>
+
+      <p class="subtitle">
+        Um mapa prático para entender novas áreas, ferramentas, formas de entrada,
+        como montar portfólio e onde começar a buscar oportunidades — mesmo que você ainda esteja começando do zero.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary checkout-link" href="https://dotfy.com.br/checkout/rota12ourota12-2026" target="_blank">
+          QUERO ACESSAR O ROTA 12 POR R$19,99
+        </a>
+      </div>
+
+      <div class="small-note">Pagamento único • acesso imediato após a confirmação</div>
+
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div class="mockup">
+            <div class="mini">Guia estratégico 2026</div>
+            <h2>ROTA <span class="gold">12</span></h2>
+            <p>As 12 Profissões da Nova Economia</p>
+          </div>
+
+          <div>
+            <ul class="checklist">
+              <li>12 áreas com potencial de crescimento na nova economia</li>
+              <li>O que cada profissional faz na prática</li>
+              <li>Ferramentas usadas em cada área</li>
+              <li>Como começar a aprender sem se perder</li>
+              <li>Como criar seus primeiros projetos de portfólio</li>
+              <li>Onde buscar clientes e oportunidades</li>
+              <li>Plano de ação para sair da leitura e partir para execução</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>O mercado mudou. Seu mapa também precisa mudar.</h2>
+        <p>
+          O ROTA 12 foi criado para quem olha para inteligência artificial, automação,
+          conteúdo, dados e serviços digitais e pensa: “por onde eu começo?”
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>Descubra novas áreas</h3>
+          <p>Entenda modelos de trabalho e serviços que ganharam força com IA, tecnologia e economia digital.</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Veja o caminho de entrada</h3>
+          <p>Saiba quais habilidades estudar, quais ferramentas conhecer e como praticar cada atividade.</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Parta para execução</h3>
+          <p>Use os exercícios, roteiros e plano de ação para montar um primeiro projeto e começar a prospectar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>As 12 rotas que você vai conhecer</h2>
+        <p>Uma visão clara de caminhos profissionais que podem ser estudados e transformados em serviços, carreira ou renda complementar.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card"><div class="num">ROTA 01</div><h3>Operador de IA para empresas</h3><p>Uso prático de IA para tarefas, processos e produtividade.</p></div>
+        <div class="card"><div class="num">ROTA 02</div><h3>Automação No-Code</h3><p>Criação de fluxos e processos automatizados sem programação avançada.</p></div>
+        <div class="card"><div class="num">ROTA 03</div><h3>Editor de vídeos curtos</h3><p>Conteúdo vertical para marcas, criadores e pequenos negócios.</p></div>
+        <div class="card"><div class="num">ROTA 04</div><h3>Gestor de conteúdo com IA</h3><p>Planejamento e produção assistida de conteúdo para redes sociais.</p></div>
+        <div class="card"><div class="num">ROTA 05</div><h3>Social Seller</h3><p>Relacionamento, prospecção e geração de conversas comerciais.</p></div>
+        <div class="card"><div class="num">ROTA 06</div><h3>Gestor de comunidades</h3><p>Organização e crescimento de comunidades digitais.</p></div>
+        <div class="card"><div class="num">ROTA 07</div><h3>Especialista em presença local</h3><p>Otimização de perfis e presença digital para negócios locais.</p></div>
+        <div class="card"><div class="num">ROTA 08</div><h3>Criador UGC</h3><p>Produção de conteúdo para marcas com foco em autenticidade e conversão.</p></div>
+        <div class="card"><div class="num">ROTA 09</div><h3>Assistente virtual com IA</h3><p>Execução remota de tarefas administrativas, atendimento e organização.</p></div>
+        <div class="card"><div class="num">ROTA 10</div><h3>Geração de leads</h3><p>Pesquisa, organização e prospecção comercial para empresas.</p></div>
+        <div class="card"><div class="num">ROTA 11</div><h3>Implementador de chatbots</h3><p>Estruturação de atendimento automatizado e fluxos de conversa.</p></div>
+        <div class="card"><div class="num">ROTA 12</div><h3>Dashboards para pequenos negócios</h3><p>Organização e visualização de dados para apoiar decisões.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <div class="darkbox">
+          <h2>O que existe dentro de cada rota?</h2>
+          <ul class="checklist">
+            <li>Descrição simples da profissão</li>
+            <li>Exemplos de serviços</li>
+            <li>Quem costuma contratar</li>
+            <li>Ferramentas indicadas</li>
+            <li>Habilidades para estudar</li>
+            <li>Ideia de projeto para portfólio</li>
+            <li>Onde procurar oportunidades</li>
+            <li>Próximos passos para começar</li>
+          </ul>
+        </div>
+
+        <div class="darkbox">
+          <h2>Você também recebe bônus</h2>
+
+          <div class="bonus">
+            <h3>Bônus #1 — Plano Primeiro Cliente</h3>
+            <p>Um roteiro de 7 dias para escolher sua rota, praticar e começar a se movimentar.</p>
+          </div>
+
+          <div class="bonus">
+            <h3>Bônus #2 — 50 Prompts de IA</h3>
+            <p>Prompts para produtividade, conteúdo, prospecção, pesquisa e execução.</p>
+          </div>
+
+          <div class="bonus">
+            <h3>Bônus #3 — Ferramentas 2026</h3>
+            <p>Uma seleção organizada de ferramentas úteis para estudar e trabalhar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <div class="container">
+      <div class="price-box">
+        <span class="badge">OFERTA DE ACESSO</span>
+        <h2>Comece agora com o ROTA 12</h2>
+        <div class="old-price">Valor de referência: R$47,00</div>
+        <div class="price"><small>R$</small>19,99</div>
+        <p>Pagamento único. Sem mensalidade.</p>
+
+        <a class="btn btn-primary checkout-link" href="https://dotfy.com.br/checkout/rota12ourota12-2026" target="_blank">
+          QUERO GARANTIR MEU ACESSO
+        </a>
+
+        <div class="small-note">Após o pagamento, você recebe as instruções de acesso ao material.</div>
+
+        <div class="disclaimer">
+          O ROTA 12 é um material educacional. Resultados financeiros variam conforme habilidades,
+          dedicação, mercado, experiência, região, oferta e execução de cada pessoa.
+          O produto não promete renda garantida, contratação ou retorno financeiro específico.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Preciso ter experiência?</summary>
+          <p>Não. O material foi estruturado para apresentar caminhos, ferramentas e próximos passos inclusive para iniciantes.</p>
+        </details>
+
+        <details>
+          <summary>Preciso saber programar?</summary>
+          <p>Não para a maior parte das rotas. Algumas áreas podem exigir conhecimentos mais técnicos conforme você evolui.</p>
+        </details>
+
+        <details>
+          <summary>O acesso é imediato?</summary>
+          <p>Sim. Após a confirmação do pagamento, o acesso pode ser enviado pelo seu sistema de checkout ou área de membros.</p>
+        </details>
+
+        <details>
+          <summary>É assinatura?</summary>
+          <p>Não. O valor de R$19,99 é pagamento único para esta oferta.</p>
+        </details>
+
+        <details>
+          <summary>Vou ganhar dinheiro automaticamente?</summary>
+          <p>Não. 100% Sim, você terá um caminho completo para alcançar seus obejetivos, e se destacar a frete do mercado!</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="price-box">
+        <h2>Você pode continuar apenas assistindo o mercado mudar…</h2>
+        <p>ou pode começar hoje a entender quais caminhos fazem sentido para você.</p>
+        <div class="price"><small>R$</small>19,99</div>
+
+        <a class="btn btn-primary checkout-link" href="https://dotfy.com.br/checkout/rota12ourota12-2026" target="_blank">
+          ACESSAR O ROTA 12 AGORA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 ROTA 12. Todos os direitos reservados.<br>
+      Produto educacional independente.
+    </div>
+  </footer>
+
+  <div class="sticky">
+    <a class="btn btn-primary checkout-link" href="https://dotfy.com.br/checkout/rota12ourota12-2026" target="_blank">
+      ACESSAR POR R$19,99
+    </a>
+  </div>
+
+  <script>
+    // TROQUE APENAS O LINK ABAIXO PELO LINK DO SEU CHECKOUT:
+    const CHECKOUT_URL = "https://dotfy.com.br/checkout/rota12ourota12-2026";
+
+    document.querySelectorAll(".checkout-link").forEach(link => {
+      link.href = CHECKOUT_URL;
+    });
+  </script>
+</body>
+</html>
